@@ -2,15 +2,20 @@ import React from 'react';
 import uuid from 'react-uuid';
 
 function App() {
+	function id(){
+		<p key={uuid()}></p>
+	}
+
 	const users = [
-		{id: 1, name: 'user1', surn: 'surn1', age: 30},
-		{id: 1, name: 'user2', surn: 'surn2', age: 31},
-		{id: 1, name: 'user3', surn: 'surn3', age: 32},
+		{id: id(), name: 'product1', cost: 100},
+		{id: id(), name: 'product2', cost: 200},
+		{id: id(), name: 'product3', cost: 300},
 	];
 	const res = users.map(function(item, index){
-		return<li key={uuid()}>{item.name}, {item.surn}, {item.age}</li>
-	})	
-	
+		return <li key={id()}>{item.name}, {item.cost}</li>
+		
+	})
+
 	return <>
 		<ul>
 			{res}
