@@ -1,17 +1,22 @@
 import React from 'react';
 
 function App() {
-	const num1 = 3;
-	const num2 = 2;
-	const name = 'john';
-	const surname = 'smit';
-	const num = 4;
+	let num = 18;
+	let text;
 
-
+	if (num >= 18){
+		const isAdult = true;
+		if (isAdult){
+			text = <p>text_1</p>
+		}
+	}
+	else{
+		<p>Тебе нет 18 лет</p>
+	}
+		
+	
 	return <>
-		result: {num1 ** num2} <br></br>
-		result: {name + ' ' + surname} <br></br>
-		result: {Math.sqrt(num)}
+		{text}
 	</>
 }
 export default App;
