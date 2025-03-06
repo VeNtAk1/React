@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from 'react-uuid';
 
 function App() {
 	const users = [
@@ -7,7 +8,7 @@ function App() {
 		{id: 1, name: 'user3', surn: 'surn3', age: 32},
 	];
 	const res = users.map(function(item, index){
-		return<li key={item.id}>{item.name}, {item.surn}, {item.age}</li>
+		return<li key={uuid()}>{item.name}, {item.surn}, {item.age}</li>
 	})	
 	
 	return <>
@@ -17,3 +18,4 @@ function App() {
 	</>;
 }
 export default App; 
+export const LineItem = (item) => <li key={uuid()}>{item}</li>;
