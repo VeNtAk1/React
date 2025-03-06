@@ -1,16 +1,28 @@
 import React from 'react';
 
 function App() {
-	function func(arg, event) {
-		console.log(arg, event);
-	}
-	function func_2(arg, event) {
-		console.log(event, arg);
-	}
+	const arr = [
+		<li>1</li>,
+		<li>2</li>,
+		<li>3</li>,
+		<li>4</li>,
+		<li>5</li>,
+		];
 
+	const arr2 = [];
+
+	for (let i = 0; i <= 5; i++){
+		arr2.push(<p>{i}</p>)
+	}
 	return <>
-		<button onClick={event => func('eee', event)}>act</button>
-		<button onClick={event => func_2('eee', event)}>act</button>
+		<ul>
+			{ arr }
+		</ul>
+		
+		<ul>
+			{ arr2 }
+		</ul>
+
 	</>;
 }
 export default App; 
