@@ -1,16 +1,17 @@
 import React from 'react';
 
 function App() {
-	function getDigitsSum(num1, num2){
-		return num1 + num2
+	function show1() {
+		alert(1);
 	}
-
-	const num_1 = 61;
-	const num_2 = 62;
 	
+	function show2() {
+		alert(2);
+	}
 	
 	return <div>
-		{ getDigitsSum(num_1, num_2)}
-	</div>
+		<button onClick={show1}>act1</button>
+		<button onClick={show2}>act2</button>
+	</div>;
 }
 export default App; 
