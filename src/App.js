@@ -1,17 +1,13 @@
 import React from 'react';
 
 function App() {
-	let text;
-	const age = 18;
+	const isAuth = true;
+	const hide = false;
 
-	if (age > 19){
-		text = <p>text_1</p>
-	}
-	else{
-		text = <p>text_2</p>
-	}
+	
 	return <div>
-		{ text }
+		{isAuth && <p>text_1</p>}
+		{!hide && <p>text_2</p>}
 	</div>
 }
 export default App; 
