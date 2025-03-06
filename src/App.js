@@ -1,22 +1,17 @@
 import React from 'react';
 
 function App() {
-	let num = 18;
 	let text;
+	const age = 18;
 
-	if (num >= 18){
-		const isAdult = true;
-		if (isAdult){
-			text = <p>text_1</p>
-		}
+	if (age > 19){
+		text = <p>text_1</p>
 	}
 	else{
-		<p>Тебе нет 18 лет</p>
+		text = <p>text_2</p>
 	}
-		
-	
-	return <>
-		{text}
-	</>
+	return <div>
+		{ text }
+	</div>
 }
-export default App;
+export default App; 
