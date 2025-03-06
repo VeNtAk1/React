@@ -1,13 +1,16 @@
 import React from 'react';
 
 function App() {
-	const isAuth = true;
-	const hide = false;
+	function getDigitsSum(num1, num2){
+		return num1 + num2
+	}
 
+	const num_1 = 61;
+	const num_2 = 62;
+	
 	
 	return <div>
-		{isAuth && <p>text_1</p>}
-		{!hide && <p>text_2</p>}
+		{ getDigitsSum(num_1, num_2)}
 	</div>
 }
 export default App; 
