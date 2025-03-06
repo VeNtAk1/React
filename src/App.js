@@ -1,19 +1,16 @@
 import React from 'react';
 
 function App() {
-	function showMess(text) {
-		alert(text);
+	function func(arg, event) {
+		console.log(arg, event);
+	}
+	function func_2(arg, event) {
+		console.log(event, arg);
 	}
 
-	function func(event) {
-		console.log(event.target); // объект с событием
-	}
-
-	return <div>
-		<button onClick={() => showMess("1")}>act1</button>
-		<button onClick={() => showMess("2")}>act2</button>
-		<button onClick={() => showMess("3")}>act3</button>
-		<button onClick={func}>act</button>
-	</div>;
+	return <>
+		<button onClick={event => func('eee', event)}>act</button>
+		<button onClick={event => func_2('eee', event)}>act</button>
+	</>;
 }
 export default App; 
